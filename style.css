@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background-color: initial;
+    width: 5px
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px 0 10px 0;
+    background-color: #999999;
+}
+
+body{
+    background-color: #131313;
+}
+
+.navbarpc{
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    right: 0;
+    position: fixed;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    z-index: 99;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.backdrop-filter-on {
+    backdrop-filter: blur(100px);
+}
+
+.navbarpc ul, li, a{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.navbarpc li:hover{
+    border-bottom: 1px solid #ed60fc;
+}
+
+section{
+    min-height: 100vh;
+}
+
+.section-primary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+}
+
+main .infos{
+    display: flex;
+    align-items: center;
+}
+
+main .avatar{
+    border-radius: 100%;
+    pointer-events: none;
+}
+
+main .infos .effect{
+    display: flex;
+    flex-direction: column;
+}
+
+main .infos .texto{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    max-width: 500px;
+}
+
+main .infos .effect .tst{
+    position: relative;
+    left: 20px;
+    border-bottom: 5px solid #ed60fc;
+    height: 5px;
+    width: 88%;
+}
+
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 80px;
+    padding-bottom: 80px;
+}
+
+.projetos .textos{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.div-projeto{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+    padding-right: 180px;
+}
+
+
+.div-projeto img{
+    width: 300px;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.div-projeto .textos-pr{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.div-projeto .textos-pr p{
+    font-weight: 600;
+}
+
+.div-projeto .textos-pr{
+    width: 600px;
+    color: white;
+}
+
+.div-projeto a{
+    text-decoration: none;
+    align-items: center;
+}
+
+.reverse a{
+    align-items: center;
+    flex-direction: row-reverse;
+} 
+
+.projetos-rows{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-sobre{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container-v{
+    max-height: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #191919;
+    width: 800px;
+}
+
+.vidro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vidro img{
+    width: 200px;
+}
+
+.vidro p{
+    width: auto;
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    max-width: 180px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+.wave_sus{
+    position: relative;
+    bottom: -10px;
+}
+
+footer{
+    background-color: #273036;
+    min-height: 20vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 853px) {
+    main .infos{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    main .infos .effect{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .projetos{
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        padding-bottom: 80px;
+    }
+
+    .div-projeto a{
+        flex-direction: column;
+    }
+
+    .reverse{
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .div-projeto .textos-pr{
+        max-width: 300px;
+    }
+
+    .vidro{
+        flex-direction: column-reverse;
+    }
+
+    .container-v{
+        max-height: 500px;
+    }
+}
